@@ -1,0 +1,3 @@
+/home/joost/Projects/OpenCV/DemoCV/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/joost/Projects/OpenCV/DemoCV/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/joost/Projects/OpenCV/DemoCV/cmake-build-debug/CMakeFiles/DemoCV.dir
