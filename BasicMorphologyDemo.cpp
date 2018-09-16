@@ -21,15 +21,15 @@
  */
 BasicMorphologyDemo::BasicMorphologyDemo()
 {
-	windows.push_back("1. Original");
-	windows.push_back("2. Gray values");
-	windows.push_back("3. Binary");
-	windows.push_back("4. Erode");
-	windows.push_back("5. Contours");
-	windows.push_back("6. Dilate");
-	windows.push_back("7. Opening");
-	windows.push_back("8. Closing");
-	windows.push_back("9. DistanceTransform");
+	windows.emplace_back("1. Original");
+	windows.emplace_back("2. Gray values");
+	windows.emplace_back("3. Binary");
+	windows.emplace_back("4. Erode");
+	windows.emplace_back("5. Contours");
+	windows.emplace_back("6. Dilate");
+	windows.emplace_back("7. Opening");
+	windows.emplace_back("8. Closing");
+	windows.emplace_back("9. DistanceTransform");
 
 	threshold = THRESHOLD_DEFAULT;
 	erosionX = EROSION_ELEMENT_DEFAULT;
