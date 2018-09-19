@@ -70,6 +70,8 @@ class BlobDetectionDemo : public Demo
 public:
 	BlobDetectionDemo();
 	void demonstrate(Source& source, WindowStrategy& windowStrategy) override;
+private:
+	cv::SimpleBlobDetector::Params params;
 };
 
 /*

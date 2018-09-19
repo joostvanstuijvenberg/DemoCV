@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/joost/Projects/OpenCV/DemoCV/BasicMorphologyDemo.cpp
+/home/joost/Projects/OpenCV/DemoCV/BlobDetectionDemo.cpp
 Demo.h
 /home/joost/Projects/OpenCV/DemoCV/Demo.h
 
