@@ -87,12 +87,12 @@ int main(int argc, char** argv)
     std::map<char, shared_ptr<Source>> sources;
     sources.emplace(pair<char, shared_ptr<CameraSource>>('a', make_shared<CameraSource>(0)));
     sources.emplace(pair<char, shared_ptr<CameraSource>>('b', make_shared<CameraSource>(1)));
-    sources.emplace(pair<char, shared_ptr<ImageSource>>('c', make_shared<ImageSource>("media/Gears.bmp")));
-    sources.emplace(pair<char, shared_ptr<ImageSource>>('d', make_shared<ImageSource>("media/Shapes.bmp")));
-    sources.emplace(pair<char, shared_ptr<ImageSource>>('e', make_shared<ImageSource>("media/Colors.jpg")));
-    sources.emplace(pair<char, shared_ptr<ImageSource>>('f', make_shared<ImageSource>("media/Things.bmp")));
-    sources.emplace(pair<char, shared_ptr<MovieSource>>('g', make_shared<MovieSource>("media/Video.avi")));
-    sources.emplace(pair<char, shared_ptr<MovieSource>>('h', make_shared<MovieSource>("media/Video.mp4")));
+    sources.emplace(pair<char, shared_ptr<ImageSource>>('c', make_shared<ImageSource>("media/abstract.bmp")));
+    sources.emplace(pair<char, shared_ptr<ImageSource>>('d', make_shared<ImageSource>("media/shapes.jpg")));
+    sources.emplace(pair<char, shared_ptr<ImageSource>>('e', make_shared<ImageSource>("media/colors.jpg")));
+    sources.emplace(pair<char, shared_ptr<ImageSource>>('f', make_shared<ImageSource>("media/bw.jpg")));
+    sources.emplace(pair<char, shared_ptr<MovieSource>>('g', make_shared<MovieSource>("media/airplane.mp4")));
+    sources.emplace(pair<char, shared_ptr<MovieSource>>('h', make_shared<MovieSource>("media/robots.mp4")));
     auto s = sources.at('c');
 
     // All available window placement strategies. Pick one as default.
