@@ -11,6 +11,12 @@
 
 #include "opencv2/opencv.hpp"
 
+#if WIN64
+#include <windows.h>
+#else
+#include <X11/Xlib.h>
+#endif
+
 /*
  * ---------------------------------------------------------------------------------------------- *
  * Superclass WindowStrategy                                                                      *
@@ -19,17 +25,32 @@
 class WindowStrategy
 {
 public:
+    WindowStrategy();
 	virtual void reset(const int numberOfWindows, const cv::Size& windowSize);
 	virtual void placeWindow(const std::string& title, const cv::Mat& image);
 	bool isMoveEnabled() { return moveEnabled; }
 	void setMoveEnabled(bool moveEnabled) { this->moveEnabled = moveEnabled; }
 	virtual void alternate();
 protected:
-	cv::Size getDisplaySize();
+	cv::Size getDisplaySize() { return cv::Size(width, height); }
 	int x = 0, y = 0;
+	int width = 0, height = 0;
 private:
 	bool moveEnabled = true;
 };
+
+inline WindowStrategy::WindowStrategy()
+{
+#if WIN32
+    width  = (int) GetSystemMetrics(SM_CXSCREEN);
+    height = (int) GetSystemMetrics(SM_CYSCREEN);
+#else
+    auto disp = XOpenDisplay(nullptr);
+    auto scrn = DefaultScreenOfDisplay(disp);
+    width  = scrn->width;
+    height = scrn->height;
+#endif
+}
 
 inline void WindowStrategy::reset(const int numberOfWindows, const cv::Size& windowSize) {
 	assert(numberOfWindows > 0);
@@ -45,11 +66,6 @@ inline void WindowStrategy::placeWindow(const std::string& title, const cv::Mat&
 
 inline void WindowStrategy::alternate() {}
 
-inline cv::Size WindowStrategy::getDisplaySize()
-{
-	return cv::Size(1280, 1024);
-}
-
 /*
  * ---------------------------------------------------------------------------------------------- *
  * Concrete subclass StackedWindowStrategy                                                        *
@@ -58,6 +74,7 @@ inline cv::Size WindowStrategy::getDisplaySize()
 class StackedWindowStrategy : public WindowStrategy
 {
 public:
+    StackedWindowStrategy() : WindowStrategy() {}
 	void reset(const int numberOfWindows, const cv::Size& windowSize) override;
 	void placeWindow(const std::string& title, const cv::Mat& image) override;
 private:
@@ -72,6 +89,7 @@ private:
 class ShiftedWindowStrategy : public WindowStrategy
 {
 public:
+    ShiftedWindowStrategy() : WindowStrategy() {}
 	void reset(const int numberOfWindows, const cv::Size& windowSize) override;
 	void placeWindow(const std::string& title, const cv::Mat& image) override;
 private:
@@ -86,6 +104,7 @@ private:
 class CircularWindowStrategy : public WindowStrategy
 {
 public:
+    CircularWindowStrategy() : WindowStrategy() {}
 	void reset(const int numberOfWindows, const cv::Size& windowSize) override;
 	void placeWindow(const std::string& title, const cv::Mat& image) override;
 	void alternate() override;
