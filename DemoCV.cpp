@@ -43,7 +43,7 @@
 
 #include "Demo.hpp"
 
- // Suppress the console window (in Visual Studio).
+// Suppress the console window (in Visual Studio).
 #pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 
 #define KEY_ESCAPE				27			// <Esc>
@@ -68,12 +68,12 @@ using namespace std;
  */
 int main(int argc, char** argv)
 {
-	int key = 0;
-	bool run = true;
+    int key = 0;
+    bool run = true;
 
-	// All available demonstrations. Pick one as default.
-	std::map<char, shared_ptr<Demo>> demos;
-	demos.insert(pair<char, shared_ptr<Demo>>('A', make_shared<BasicMorphologyDemo>()));
+    // All available demonstrations. Pick one as default.
+    std::map<char, shared_ptr<Demo>> demos;
+    demos.insert(pair<char, shared_ptr<Demo>>('A', make_shared<BasicMorphologyDemo>()));
     demos.insert(pair<char, shared_ptr<Demo>>('B', make_shared<BitPlaneSlicingDemo>()));
     demos.insert(pair<char, shared_ptr<Demo>>('C', make_shared<BlobDetectionDemo>()));
     demos.insert(pair<char, shared_ptr<Demo>>('D', make_shared<RegionOfInterestDemo>()));
@@ -81,98 +81,98 @@ int main(int argc, char** argv)
     demos.insert(pair<char, shared_ptr<Demo>>('F', make_shared<ThresholdDemo>()));
     demos.insert(pair<char, shared_ptr<Demo>>('G', make_shared<SmoothingDemo>()));
     demos.insert(pair<char, shared_ptr<Demo>>('H', make_shared<EdgeDetectionDemo>()));
-	auto d = demos.at('A');
+    auto d = demos.at('A');
 
-	// All available sources. Pick one as default.
-	std::map<char, shared_ptr<Source>> sources;
-	sources.emplace(pair<char, shared_ptr<CameraSource>>('a', make_shared<CameraSource>(0)));
-	sources.emplace(pair<char, shared_ptr<CameraSource>>('b', make_shared<CameraSource>(1)));
-	sources.emplace(pair<char, shared_ptr<ImageSource>>('c', make_shared<ImageSource>("media/Gears.bmp")));
-	sources.emplace(pair<char, shared_ptr<ImageSource>>('d', make_shared<ImageSource>("media/Shapes.bmp")));
-	sources.emplace(pair<char, shared_ptr<ImageSource>>('e', make_shared<ImageSource>("media/Colors.jpg")));
-	sources.emplace(pair<char, shared_ptr<ImageSource>>('f', make_shared<ImageSource>("media/Things.bmp")));
-	sources.emplace(pair<char, shared_ptr<MovieSource>>('g', make_shared<MovieSource>("media/Video.avi")));
-	sources.emplace(pair<char, shared_ptr<MovieSource>>('h', make_shared<MovieSource>("media/Video.mp4")));
-	auto s = sources.at('c');
+    // All available sources. Pick one as default.
+    std::map<char, shared_ptr<Source>> sources;
+    sources.emplace(pair<char, shared_ptr<CameraSource>>('a', make_shared<CameraSource>(0)));
+    sources.emplace(pair<char, shared_ptr<CameraSource>>('b', make_shared<CameraSource>(1)));
+    sources.emplace(pair<char, shared_ptr<ImageSource>>('c', make_shared<ImageSource>("media/Gears.bmp")));
+    sources.emplace(pair<char, shared_ptr<ImageSource>>('d', make_shared<ImageSource>("media/Shapes.bmp")));
+    sources.emplace(pair<char, shared_ptr<ImageSource>>('e', make_shared<ImageSource>("media/Colors.jpg")));
+    sources.emplace(pair<char, shared_ptr<ImageSource>>('f', make_shared<ImageSource>("media/Things.bmp")));
+    sources.emplace(pair<char, shared_ptr<MovieSource>>('g', make_shared<MovieSource>("media/Video.avi")));
+    sources.emplace(pair<char, shared_ptr<MovieSource>>('h', make_shared<MovieSource>("media/Video.mp4")));
+    auto s = sources.at('c');
 
-	// All available window placement strategies. Pick one as default.
-	std::map<char, shared_ptr<WindowStrategy>> windowStrategies;
-	windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('0', make_shared<WindowStrategy>()));
+    // All available window placement strategies. Pick one as default.
+    std::map<char, shared_ptr<WindowStrategy>> windowStrategies;
+    windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('0', make_shared<WindowStrategy>()));
     windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('1', make_shared<StackedWindowStrategy>()));
     windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('2', make_shared<ShiftedWindowStrategy>()));
     windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('3', make_shared<CircularWindowStrategy>()));
-	auto w = windowStrategies.at('1');
+    auto w = windowStrategies.at('1');
 
-	do {
-		// Let the chosen demonstration subclass perform one (1) cycle of its work on the given source,
-		// using the given strategy for window placement. The window strategy needs the number of
-		// windows and their sizes to calculate the right distribution of windows on the display.
-		w->reset(d->getNumberOfWindows(), s->getImage().size());
-		d->show();
-		d->demonstrate(*s, *w);
+    do {
+        // Let the chosen demonstration subclass perform one (1) cycle of its work on the given source,
+        // using the given strategy for window placement. The window strategy needs the number of
+        // windows and their sizes to calculate the right distribution of windows on the display.
+        w->reset(d->getNumberOfWindows(), s->getImage().size());
+        d->show();
+        d->demonstrate(*s, *w);
 
-		// Wait for a key. In manual mode we will wait forever. In run mode we will wait for 40 msec
-		// maximum, thus generating an update rate of approximately 25 fps. This loop will end if <ESC>
-		// was pressed.
-		key = cv::waitKey(run ? WAIT_TIME_25_FPS : WAIT_TIME_INFINITE);
+        // Wait for a key. In manual mode we will wait forever. In run mode we will wait for 40 msec
+        // maximum, thus generating an update rate of approximately 25 fps. This loop will end if <ESC>
+        // was pressed.
+        key = cv::waitKey(run ? WAIT_TIME_25_FPS : WAIT_TIME_INFINITE);
 
-		// Capital characters select the demonstration.
-		if (demos.count(key) != 0)
-		{
-			d->hide();
-			d = demos.at(key);
-			continue;
-		}
+        // Capital characters select the demonstration.
+        if (demos.count(key) != 0)
+        {
+            d->hide();
+            d = demos.at(key);
+            continue;
+        }
 
-		// Non-capital characters select the source.
-		if (sources.count(key) != 0)
-		{
-			s = sources.at(key);
-			continue;
-		}
+        // Non-capital characters select the source.
+        if (sources.count(key) != 0)
+        {
+            s = sources.at(key);
+            continue;
+        }
 
-		// Numeric keys select the window strategy.
-		if (windowStrategies.count(key) != 0)
-		{
-			w = windowStrategies.at(key);
-			w->setMoveEnabled(true);
-			continue;
-		}
+        // Numeric keys select the window strategy.
+        if (windowStrategies.count(key) != 0)
+        {
+            w = windowStrategies.at(key);
+            w->setMoveEnabled(true);
+            continue;
+        }
 
-		// Other keys influence the behaviour of the demonstration.
-		switch (key)
-		{
-			// Change between manual and continuous mode.
-		case KEY_RUN_MANUAL:
-			run = !run;
-			break;
-			// Enable/disable window moving.
-		case KEY_MOVE_LEAVE:
-			w->setMoveEnabled(!w->isMoveEnabled());
-			break;
-			// Change the way the window strategy displays windows, if it supports dynamic change.
-		case KEY_WIN_ALTER:
-			w->alternate();
-			break;
-			// Flip the image horizontally or vertically.
-		case KEY_FLIP_HOR:
-			s->toggleFlipHorizontal();
-			break;
-		case KEY_FLIP_VER:
-			s->toggleFlipVertical();
-			break;
-			// Increase or decrease the image size, or return to normal image size.
-		case KEY_INCREASE_SIZE:
-			s->increaseSize();
-			break;
-		case KEY_DECREASE_SIZE:
-			s->decreaseSize();
-			break;
-		case KEY_NORMAL_SIZE:
-			s->normalSize();
-			break;
-		}
-	} while (key != KEY_ESCAPE);
+        // Other keys influence the behaviour of the demonstration.
+        switch (key)
+        {
+            // Change between manual and continuous mode.
+            case KEY_RUN_MANUAL:
+                run = !run;
+                break;
+                // Enable/disable window moving.
+            case KEY_MOVE_LEAVE:
+                w->setMoveEnabled(!w->isMoveEnabled());
+                break;
+                // Change the way the window strategy displays windows, if it supports dynamic change.
+            case KEY_WIN_ALTER:
+                w->alternate();
+                break;
+                // Flip the image horizontally or vertically.
+            case KEY_FLIP_HOR:
+                s->toggleFlipHorizontal();
+                break;
+            case KEY_FLIP_VER:
+                s->toggleFlipVertical();
+                break;
+                // Increase or decrease the image size, or return to normal image size.
+            case KEY_INCREASE_SIZE:
+                s->increaseSize();
+                break;
+            case KEY_DECREASE_SIZE:
+                s->decreaseSize();
+                break;
+            case KEY_NORMAL_SIZE:
+                s->normalSize();
+                break;
+        }
+    } while (key != KEY_ESCAPE);
 
-	return 0;
+    return 0;
 }

@@ -26,17 +26,17 @@ class WindowStrategy
 {
 public:
     WindowStrategy();
-	virtual void reset(const int numberOfWindows, const cv::Size& windowSize);
-	virtual void placeWindow(const std::string& title, const cv::Mat& image);
-	bool isMoveEnabled() { return moveEnabled; }
-	void setMoveEnabled(bool moveEnabled) { this->moveEnabled = moveEnabled; }
-	virtual void alternate();
+    virtual void reset(const int numberOfWindows, const cv::Size& windowSize);
+    virtual void placeWindow(const std::string& title, const cv::Mat& image);
+    bool isMoveEnabled() { return moveEnabled; }
+    void setMoveEnabled(bool moveEnabled) { this->moveEnabled = moveEnabled; }
+    virtual void alternate();
 protected:
-	cv::Size getDisplaySize() { return cv::Size(width, height); }
-	int x = 0, y = 0;
-	int width = 0, height = 0;
+    cv::Size getDisplaySize() { return cv::Size(width, height); }
+    int x = 0, y = 0;
+    int width = 0, height = 0;
 private:
-	bool moveEnabled = true;
+    bool moveEnabled = true;
 };
 
 inline WindowStrategy::WindowStrategy()
@@ -53,15 +53,15 @@ inline WindowStrategy::WindowStrategy()
 }
 
 inline void WindowStrategy::reset(const int numberOfWindows, const cv::Size& windowSize) {
-	assert(numberOfWindows > 0);
-	x = 0, y = 0;
+    assert(numberOfWindows > 0);
+    x = 0, y = 0;
 }
 
 inline void WindowStrategy::placeWindow(const std::string& title, const cv::Mat& image)
 {
-	cv::imshow(title, image);
-	if (moveEnabled)
-		cv::moveWindow(title, x, y);
+    cv::imshow(title, image);
+    if (moveEnabled)
+        cv::moveWindow(title, x, y);
 }
 
 inline void WindowStrategy::alternate() {}
@@ -75,10 +75,10 @@ class StackedWindowStrategy : public WindowStrategy
 {
 public:
     StackedWindowStrategy() : WindowStrategy() {}
-	void reset(const int numberOfWindows, const cv::Size& windowSize) override;
-	void placeWindow(const std::string& title, const cv::Mat& image) override;
+    void reset(const int numberOfWindows, const cv::Size& windowSize) override;
+    void placeWindow(const std::string& title, const cv::Mat& image) override;
 private:
-	int dx, dy;
+    int dx, dy;
 };
 
 /*
@@ -90,10 +90,10 @@ class ShiftedWindowStrategy : public WindowStrategy
 {
 public:
     ShiftedWindowStrategy() : WindowStrategy() {}
-	void reset(const int numberOfWindows, const cv::Size& windowSize) override;
-	void placeWindow(const std::string& title, const cv::Mat& image) override;
+    void reset(const int numberOfWindows, const cv::Size& windowSize) override;
+    void placeWindow(const std::string& title, const cv::Mat& image) override;
 private:
-	int dy;
+    int dy;
 };
 
 /*
@@ -105,15 +105,15 @@ class CircularWindowStrategy : public WindowStrategy
 {
 public:
     CircularWindowStrategy() : WindowStrategy() {}
-	void reset(const int numberOfWindows, const cv::Size& windowSize) override;
-	void placeWindow(const std::string& title, const cv::Mat& image) override;
-	void alternate() override;
+    void reset(const int numberOfWindows, const cv::Size& windowSize) override;
+    void placeWindow(const std::string& title, const cv::Mat& image) override;
+    void alternate() override;
 private:
-	double angle, angleIncrement;
-	int direction = 1;
-	int arrow;
-	int centreX, centreY;
-	int displaceX, displaceY;
+    double angle, angleIncrement;
+    int direction = 1;
+    int arrow;
+    int centreX, centreY;
+    int displaceX, displaceY;
 };
 
 #endif

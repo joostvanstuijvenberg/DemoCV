@@ -15,9 +15,9 @@
  */
 void StackedWindowStrategy::reset(const int numberOfWindows, const cv::Size& windowSize)
 {
-	WindowStrategy::reset(numberOfWindows, windowSize);
-	dx = (getDisplaySize().width - windowSize.width) / numberOfWindows;
-	dy = (getDisplaySize().height - windowSize.height) / numberOfWindows;
+    WindowStrategy::reset(numberOfWindows, windowSize);
+    dx = (getDisplaySize().width - windowSize.width) / numberOfWindows;
+    dy = (getDisplaySize().height - windowSize.height) / numberOfWindows;
 }
 
 /*
@@ -27,7 +27,7 @@ void StackedWindowStrategy::reset(const int numberOfWindows, const cv::Size& win
  */
 void StackedWindowStrategy::placeWindow(const std::string& title, const cv::Mat& image)
 {
-	WindowStrategy::placeWindow(title, image);
-	x += dx;
-	y += dy;
+    WindowStrategy::placeWindow(title, image);
+    x += dx;
+    y += dy;
 }
