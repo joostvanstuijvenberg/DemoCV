@@ -72,25 +72,16 @@ int main(int argc, char** argv)
 	bool run = true;
 
 	// All available demonstrations. Pick one as default.
-	BasicMorphologyDemo bmd;
-	BitPlaneSlicingDemo bsd;
-	BlobDetectionDemo bdd;
-	RegionOfInterestDemo rid;
-	ColorDemo cld;
-	ThresholdDemo thd;
-	SmoothingDemo smd;
-	EdgeDetectionDemo edd;
-
-	std::map<char, Demo*> demos;
-	demos.insert(pair<char, Demo*>('A', &bmd));
-	demos.insert(pair<char, Demo*>('B', &bsd));
-	demos.insert(pair<char, Demo*>('C', &bdd));
-	demos.insert(pair<char, Demo*>('D', &rid));
-	demos.insert(pair<char, Demo*>('E', &cld));
-	demos.insert(pair<char, Demo*>('F', &thd));
-	demos.insert(pair<char, Demo*>('G', &smd));
-	demos.insert(pair<char, Demo*>('H', &edd));
-	Demo* d = demos.at('A');
+	std::map<char, shared_ptr<Demo>> demos;
+	demos.insert(pair<char, shared_ptr<Demo>>('A', make_shared<BasicMorphologyDemo>()));
+    demos.insert(pair<char, shared_ptr<Demo>>('B', make_shared<BitPlaneSlicingDemo>()));
+    demos.insert(pair<char, shared_ptr<Demo>>('C', make_shared<BlobDetectionDemo>()));
+    demos.insert(pair<char, shared_ptr<Demo>>('D', make_shared<RegionOfInterestDemo>()));
+    demos.insert(pair<char, shared_ptr<Demo>>('E', make_shared<ColorDemo>()));
+    demos.insert(pair<char, shared_ptr<Demo>>('F', make_shared<ThresholdDemo>()));
+    demos.insert(pair<char, shared_ptr<Demo>>('G', make_shared<SmoothingDemo>()));
+    demos.insert(pair<char, shared_ptr<Demo>>('H', make_shared<EdgeDetectionDemo>()));
+	auto d = demos.at('A');
 
 	// All available sources. Pick one as default.
 	std::map<char, shared_ptr<Source>> sources;

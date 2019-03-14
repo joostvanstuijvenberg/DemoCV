@@ -14,7 +14,6 @@
     <list default="true" id="81cb158d-a2c7-44b7-bc55-bd65e7dae3eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoCV.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DemoCV.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source.hpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -101,18 +100,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="745" />
+          <entry key="cpp" value="823" />
           <entry key="h" value="10" />
           <entry key="hpp" value="263" />
-          <entry key="txt" value="322" />
+          <entry key="txt" value="385" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="82" />
-          <entry key="ObjectiveC" value="1018" />
-          <entry key="PLAIN_TEXT" value="240" />
+          <entry key="ObjectiveC" value="1096" />
+          <entry key="PLAIN_TEXT" value="303" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -123,8 +122,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DemoCV.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="103" column="58" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
+            <state relative-caret-position="209">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -258,7 +257,7 @@
       <workItem from="1540393078279" duration="317000" />
       <workItem from="1540393917129" duration="6000" />
       <workItem from="1552555036255" duration="5566000" />
-      <workItem from="1552574627421" duration="1754000" />
+      <workItem from="1552574627421" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="Added some CLion files.">
       <created>1537127643706</created>
@@ -323,11 +322,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552575749707</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Using shared pointers for the various sources.">
+      <created>1552576536235</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1552576536235</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18506000" />
+    <option name="totallyTimeSpent" value="18737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="0" />
@@ -372,7 +378,8 @@
     <MESSAGE value="Changed window placement strategy selection to use shared_ptr." />
     <MESSAGE value="Determine real display dimensions both for Windows and Unix (X11)." />
     <MESSAGE value="Changed #define constant to a more descriptive name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed #define constant to a more descriptive name." />
+    <MESSAGE value="Using shared pointers for the various sources." />
+    <option name="LAST_COMMIT_MESSAGE" value="Using shared pointers for the various sources." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -469,8 +476,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DemoCV.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="103" column="58" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
+        <state relative-caret-position="209">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
