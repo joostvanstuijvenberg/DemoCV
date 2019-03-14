@@ -57,7 +57,7 @@
 #define KEY_NORMAL_SIZE			'='
 
 #define WAIT_TIME_INFINITE		0
-#define WAIT_TIME_40_MSEC		40
+#define WAIT_TIME_25_FPS		40
 
 /*
  * ---------------------------------------------------------------------------------------------- *
@@ -125,7 +125,7 @@ int main(int argc, char** argv)
 		// Wait for a key. In manual mode we will wait forever. In run mode we will wait for 40 msec
 		// maximum, thus generating an update rate of approximately 25 fps. This loop will end if <ESC>
 		// was pressed.
-		key = cv::waitKey(run ? WAIT_TIME_40_MSEC : WAIT_TIME_INFINITE);
+		key = cv::waitKey(run ? WAIT_TIME_25_FPS : WAIT_TIME_INFINITE);
 
 		// Capital characters select the demonstration.
 		if (demos.count(key) != 0)
