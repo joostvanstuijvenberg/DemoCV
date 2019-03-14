@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <opencv_storage>
     <thresholdStep>10.</thresholdStep>
-    <minThreshold>40.</minThreshold>
-    <maxThreshold>121.</maxThreshold>
-    <minRepeatability>2</minRepeatability>
+    <minThreshold>70.</minThreshold>
+    <maxThreshold>131.</maxThreshold>
+    <minRepeatability>5</minRepeatability>
     <minDistBetweenBlobs>10.</minDistBetweenBlobs>
     <filterByColor>0</filterByColor>
     <blobColor>0</blobColor>
     <filterByArea>1</filterByArea>
-    <minArea>20.</minArea>
-    <maxArea>2000.</maxArea>
-    <filterByCircularity>1</filterByCircularity>
+    <minArea>500.</minArea>
+    <maxArea>5000.</maxArea>
+    <filterByCircularity>0</filterByCircularity>
     <minCircularity>8.0000000000000000e-01</minCircularity>
     <maxCircularity>1.</maxCircularity>
     <filterByInertia>0</filterByInertia>

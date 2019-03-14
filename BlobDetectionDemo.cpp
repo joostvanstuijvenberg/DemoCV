@@ -11,7 +11,7 @@
 BlobDetectionDemo::BlobDetectionDemo()
 {
     windows.emplace_back("1. Original");
-    windows.emplace_back("2. Circular blobs");
+    windows.emplace_back("2. BLOB keypoints found");
 
     cv::FileStorage storage("BlobDetectionParameters.xml", cv::FileStorage::READ);
     cv::FileNode node = storage["opencv_storage"];
@@ -33,11 +33,11 @@ void BlobDetectionDemo::demonstrate(Source& source, WindowStrategy& windowStrate
     // Original image.
     windowStrategy.placeWindow(windows[0], original);
 
-    // Circular blobs.
-    cv::Mat circularBlobs(original.size(), original.type());
-    cv::imshow(windows[1], circularBlobs);
+    // BLOBs and their keypoints.
+    cv::Mat blobs(original.size(), original.type());
+    cv::imshow(windows[1], blobs);
 
     detector->detect(original, keypoints);
-    cv::drawKeypoints(original, keypoints, circularBlobs, cv::Scalar(180, 225, 225), cv::DrawMatchesFlags::DEFAULT);
-    windowStrategy.placeWindow(windows[1], circularBlobs);
+    cv::drawKeypoints(original, keypoints, blobs, cv::Scalar(180, 225, 225), cv::DrawMatchesFlags::DEFAULT);
+    windowStrategy.placeWindow(windows[1], blobs);
 }
