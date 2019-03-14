@@ -39,7 +39,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "Demo.h"
+#include "Demo.hpp"
 
  // Suppress the console window (in Visual Studio).
 #pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")

@@ -6,7 +6,7 @@
  * sources & updates: https://github.com/joostvanstuijvenberg/DemoCV
  */
 
-#include "WindowStrategy.h"
+#include "WindowStrategy.hpp"
 
 /*
  * ---------------------------------------------------------------------------------------------- *

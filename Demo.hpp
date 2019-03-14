@@ -12,8 +12,8 @@
 #include <string>
 #include <vector>
 #include "opencv2/opencv.hpp"
-#include "Source.h"
-#include "WindowStrategy.h"
+#include "Source.hpp"
+#include "WindowStrategy.hpp"
 
 /*
  * ---------------------------------------------------------------------------------------------- *

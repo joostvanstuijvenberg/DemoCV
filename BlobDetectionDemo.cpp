@@ -6,7 +6,7 @@
  * sources & updates: https://github.com/joostvanstuijvenberg/DemoCV
  */
 
-#include "Demo.h"
+#include "Demo.hpp"
 
 BlobDetectionDemo::BlobDetectionDemo()
 {

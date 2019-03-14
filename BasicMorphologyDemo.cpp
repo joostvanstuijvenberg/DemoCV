@@ -6,7 +6,7 @@
  * sources & updates: https://github.com/joostvanstuijvenberg/DemoCV
  */
 
-#include "Demo.h"
+#include "Demo.hpp"
 
 #define THRESHOLD_DEFAULT			127
 #define THRESHOLD_MAX				255
