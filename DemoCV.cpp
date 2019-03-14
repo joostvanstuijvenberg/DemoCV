@@ -39,6 +39,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <memory>
+
 #include "Demo.hpp"
 
  // Suppress the console window (in Visual Studio).
@@ -105,17 +107,12 @@ int main(int argc, char** argv)
 	Source* s = sources.at('c');
 
 	// All available window placement strategies. Pick one as default.
-	WindowStrategy ws0;
-	StackedWindowStrategy ws1;
-	ShiftedWindowStrategy ws2;
-	CircularWindowStrategy ws3;
-
-	std::map<char, WindowStrategy*> windowStrategies;
-	windowStrategies.insert(std::pair<char, WindowStrategy*>('0', &ws0));
-	windowStrategies.insert(std::pair<char, WindowStrategy*>('1', &ws1));
-	windowStrategies.insert(std::pair<char, WindowStrategy*>('2', &ws2));
-	windowStrategies.insert(std::pair<char, WindowStrategy*>('3', &ws3));
-	WindowStrategy* w = windowStrategies.at('1');
+	std::map<char, std::shared_ptr<WindowStrategy>> windowStrategies;
+	windowStrategies.emplace(std::pair<char, std::shared_ptr<WindowStrategy>>('0', std::make_shared<WindowStrategy>()));
+    windowStrategies.emplace(std::pair<char, std::shared_ptr<WindowStrategy>>('1', std::make_shared<StackedWindowStrategy>()));
+    windowStrategies.emplace(std::pair<char, std::shared_ptr<WindowStrategy>>('2', std::make_shared<ShiftedWindowStrategy>()));
+    windowStrategies.emplace(std::pair<char, std::shared_ptr<WindowStrategy>>('3', std::make_shared<CircularWindowStrategy>()));
+	auto w = windowStrategies.at('1');
 
 	do {
 		// Let the chosen demonstration subclass perform one (1) cycle of its work on the given source,

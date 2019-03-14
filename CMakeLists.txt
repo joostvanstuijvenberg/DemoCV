@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.12)
 project(DemoCV)
-
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD 14)
 add_executable (DemoCV DemoCV.cpp BasicMorphologyDemo.cpp CircularWindowStrategy.cpp EdgeDetectionDemo.cpp
         ShiftedWindowStrategy.cpp ThresholdDemo.cpp BitPlaneSlicingDemo.cpp ColorDemo.cpp
         Demo.cpp SmoothingDemo.cpp BlobDetectionDemo.cpp Demo.cpp RegionOfInterestDemo.cpp
