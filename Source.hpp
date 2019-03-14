@@ -83,24 +83,24 @@ inline void Source::postProcess(cv::Mat& image)
 
 /*
  * ---------------------------------------------------------------------------------------------- *
- * Concrete subclass FileSource to support image files                                            *
+ * Concrete subclass ImageSource to support image files                                            *
  * ---------------------------------------------------------------------------------------------- *
  */
-class FileSource : public Source
+class ImageSource : public Source
 {
 public:
-	FileSource(std::string filename);
+	ImageSource(std::string filename);
 	cv::Mat getImage() override;
 private:
 	std::string filename;
 };
 
-inline FileSource::FileSource(std::string filename)
+inline ImageSource::ImageSource(std::string filename)
 {
 	this->filename = filename;
 }
 
-inline cv::Mat FileSource::getImage()
+inline cv::Mat ImageSource::getImage()
 {
 	image = cv::imread(filename);
 	postProcess(image);

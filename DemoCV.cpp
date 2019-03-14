@@ -59,6 +59,8 @@
 #define WAIT_TIME_INFINITE		0
 #define WAIT_TIME_25_FPS		40
 
+using namespace std;
+
 /*
  * ---------------------------------------------------------------------------------------------- *
  * Main()                                                                                         *
@@ -80,38 +82,34 @@ int main(int argc, char** argv)
 	EdgeDetectionDemo edd;
 
 	std::map<char, Demo*> demos;
-	demos.insert(std::pair<char, Demo*>('A', &bmd));
-	demos.insert(std::pair<char, Demo*>('B', &bsd));
-	demos.insert(std::pair<char, Demo*>('C', &bdd));
-	demos.insert(std::pair<char, Demo*>('D', &rid));
-	demos.insert(std::pair<char, Demo*>('E', &cld));
-	demos.insert(std::pair<char, Demo*>('F', &thd));
-	demos.insert(std::pair<char, Demo*>('G', &smd));
-	demos.insert(std::pair<char, Demo*>('H', &edd));
+	demos.insert(pair<char, Demo*>('A', &bmd));
+	demos.insert(pair<char, Demo*>('B', &bsd));
+	demos.insert(pair<char, Demo*>('C', &bdd));
+	demos.insert(pair<char, Demo*>('D', &rid));
+	demos.insert(pair<char, Demo*>('E', &cld));
+	demos.insert(pair<char, Demo*>('F', &thd));
+	demos.insert(pair<char, Demo*>('G', &smd));
+	demos.insert(pair<char, Demo*>('H', &edd));
 	Demo* d = demos.at('A');
 
 	// All available sources. Pick one as default.
-	CameraSource cs0{ 0 }, cs1{ 1 };
-	FileSource fs0{ "media/Gears.bmp" }, fs1{ "media/Shapes.bmp" }, fs2{ "media/Colors.jpg" }, fs3{ "media/Things.bmp" };
-	MovieSource ms0{ "media/Video.avi" }, ms1{ "media/Video.mp4" };
-
-	std::map<char, Source*> sources;
-	sources.insert(std::pair<char, Source*>('a', &cs0));
-	sources.insert(std::pair<char, Source*>('b', &cs1));
-	sources.insert(std::pair<char, Source*>('c', &fs0));
-	sources.insert(std::pair<char, Source*>('d', &fs1));
-	sources.insert(std::pair<char, Source*>('e', &fs2));
-	sources.insert(std::pair<char, Source*>('f', &fs3));
-	sources.insert(std::pair<char, Source*>('g', &ms0));
-	sources.insert(std::pair<char, Source*>('h', &ms1));
-	Source* s = sources.at('c');
+	std::map<char, shared_ptr<Source>> sources;
+	sources.emplace(pair<char, shared_ptr<CameraSource>>('a', make_shared<CameraSource>(0)));
+	sources.emplace(pair<char, shared_ptr<CameraSource>>('b', make_shared<CameraSource>(1)));
+	sources.emplace(pair<char, shared_ptr<ImageSource>>('c', make_shared<ImageSource>("media/Gears.bmp")));
+	sources.emplace(pair<char, shared_ptr<ImageSource>>('d', make_shared<ImageSource>("media/Shapes.bmp")));
+	sources.emplace(pair<char, shared_ptr<ImageSource>>('e', make_shared<ImageSource>("media/Colors.jpg")));
+	sources.emplace(pair<char, shared_ptr<ImageSource>>('f', make_shared<ImageSource>("media/Things.bmp")));
+	sources.emplace(pair<char, shared_ptr<MovieSource>>('g', make_shared<MovieSource>("media/Video.avi")));
+	sources.emplace(pair<char, shared_ptr<MovieSource>>('h', make_shared<MovieSource>("media/Video.mp4")));
+	auto s = sources.at('c');
 
 	// All available window placement strategies. Pick one as default.
-	std::map<char, std::shared_ptr<WindowStrategy>> windowStrategies;
-	windowStrategies.emplace(std::pair<char, std::shared_ptr<WindowStrategy>>('0', std::make_shared<WindowStrategy>()));
-    windowStrategies.emplace(std::pair<char, std::shared_ptr<WindowStrategy>>('1', std::make_shared<StackedWindowStrategy>()));
-    windowStrategies.emplace(std::pair<char, std::shared_ptr<WindowStrategy>>('2', std::make_shared<ShiftedWindowStrategy>()));
-    windowStrategies.emplace(std::pair<char, std::shared_ptr<WindowStrategy>>('3', std::make_shared<CircularWindowStrategy>()));
+	std::map<char, shared_ptr<WindowStrategy>> windowStrategies;
+	windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('0', make_shared<WindowStrategy>()));
+    windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('1', make_shared<StackedWindowStrategy>()));
+    windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('2', make_shared<ShiftedWindowStrategy>()));
+    windowStrategies.emplace(pair<char, shared_ptr<WindowStrategy>>('3', make_shared<CircularWindowStrategy>()));
 	auto w = windowStrategies.at('1');
 
 	do {

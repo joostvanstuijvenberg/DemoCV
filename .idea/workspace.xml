@@ -14,6 +14,7 @@
     <list default="true" id="81cb158d-a2c7-44b7-bc55-bd65e7dae3eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoCV.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DemoCV.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source.hpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -86,7 +87,7 @@
           <entry key="cmake" value="1" />
           <entry key="cpp" value="11" />
           <entry key="h" value="5" />
-          <entry key="hpp" value="3" />
+          <entry key="hpp" value="4" />
           <entry key="txt" value="3" />
           <entry key="xml" value="1" />
         </counts>
@@ -94,24 +95,24 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="4" />
-          <entry key="ObjectiveC" value="19" />
+          <entry key="ObjectiveC" value="20" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="500" />
+          <entry key="cpp" value="745" />
           <entry key="h" value="10" />
-          <entry key="hpp" value="251" />
-          <entry key="txt" value="268" />
+          <entry key="hpp" value="263" />
+          <entry key="txt" value="322" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="82" />
-          <entry key="ObjectiveC" value="761" />
-          <entry key="PLAIN_TEXT" value="186" />
+          <entry key="ObjectiveC" value="1018" />
+          <entry key="PLAIN_TEXT" value="240" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -122,8 +123,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DemoCV.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+            <state relative-caret-position="329">
+              <caret line="103" column="58" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -133,7 +134,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>resize</find>
+      <find>std::make_shared</find>
     </findStrings>
+    <replaceStrings>
+      <replace>make_shared</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
     </dirStrings>
@@ -158,6 +163,7 @@
         <option value="$PROJECT_DIR$/BlobDetectionParameters.xml" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/WindowStrategy.hpp" />
+        <option value="$PROJECT_DIR$/Source.hpp" />
         <option value="$PROJECT_DIR$/DemoCV.cpp" />
       </list>
     </option>
@@ -252,7 +258,7 @@
       <workItem from="1540393078279" duration="317000" />
       <workItem from="1540393917129" duration="6000" />
       <workItem from="1552555036255" duration="5566000" />
-      <workItem from="1552574627421" duration="990000" />
+      <workItem from="1552574627421" duration="1754000" />
     </task>
     <task id="LOCAL-00001" summary="Added some CLion files.">
       <created>1537127643706</created>
@@ -310,11 +316,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552561140350</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changed #define constant to a more descriptive name.">
+      <created>1552575749707</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1552575749707</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17742000" />
+    <option name="totallyTimeSpent" value="18506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="0" />
@@ -324,14 +337,14 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32985386" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39979124" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.19393283" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.19393283" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -358,7 +371,8 @@
     <MESSAGE value="Refactored header files to extension .hpp." />
     <MESSAGE value="Changed window placement strategy selection to use shared_ptr." />
     <MESSAGE value="Determine real display dimensions both for Windows and Unix (X11)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Determine real display dimensions both for Windows and Unix (X11)." />
+    <MESSAGE value="Changed #define constant to a more descriptive name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed #define constant to a more descriptive name." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -375,13 +389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
-          <caret line="161" column="30" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -420,6 +427,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1081">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#233#250#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -427,6 +437,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#202#231#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -447,10 +460,17 @@
     <entry file="file://$PROJECT_DIR$/StackedWindowStrategy.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Source.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="89" column="1" lean-forward="true" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DemoCV.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state relative-caret-position="329">
+          <caret line="103" column="58" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
         </state>
       </provider>
     </entry>
