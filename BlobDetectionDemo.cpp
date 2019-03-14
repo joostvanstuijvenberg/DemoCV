@@ -16,7 +16,6 @@ BlobDetectionDemo::BlobDetectionDemo()
     cv::FileStorage storage("BlobDetectionParameters.xml", cv::FileStorage::READ);
     cv::FileNode node = storage["opencv_storage"];
     params.read(node);
-
 }
 
 /*

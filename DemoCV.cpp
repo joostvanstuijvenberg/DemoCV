@@ -3,22 +3,22 @@
  * Avans Hogeschool Breda
  *
  * CC BY-SA 4.0, see: https://creativecommons.org/licenses/by-sa/4.0/
- * sources & updates: https://github.com/joostvanstuijvenberg/OpenCV
+ * sources & updates: https://github.com/joostvanstuijvenberg/DemoCV
  *
  * You are free to:
- *    Share � copy and redistribute the material in any medium or format
- *    Adapt � remix, transform, and build upon the material for any purpose, even commercially.
+ *    Share - copy and redistribute the material in any medium or format
+ *    Adapt - remix, transform, and build upon the material for any purpose, even commercially.
  *
  * The licensor cannot revoke these freedoms as long as you follow the license terms.
  *
  * Under the following terms:
- *    Attribution � You must give appropriate credit, provide a link to the license, and indicate
+ *    Attribution - You must give appropriate credit, provide a link to the license, and indicate
  *                  if changes were made. You may do so in any reasonable manner, but not in any
  * 	                way that suggests the licensor endorses you or your use.
- *    ShareAlike  � If you remix, transform, or build upon the material, you must distribute your
+ *    ShareAlike  - If you remix, transform, or build upon the material, you must distribute your
  *                  contributions under the same license as the original.
  *
- * No additional restrictions � You may not apply legal terms or technological measures that
+ * No additional restrictions - You may not apply legal terms or technological measures that
  * legally restrict others from doing anything the license permits.
  *
  * Notices:
@@ -57,7 +57,7 @@
 #define KEY_NORMAL_SIZE			'='
 
 #define WAIT_TIME_INFINITE		0
-#define WAIT_TIME_25_FPS		40
+#define WAIT_TIME_25_FPS		40          // approx. 40 msec per frame => 25 fps
 
 using namespace std;
 
@@ -104,7 +104,7 @@ int main(int argc, char** argv)
     auto w = windowStrategies.at('1');
 
     do {
-        // Let the chosen demonstration subclass perform one (1) cycle of its work on the given source,
+        // Let the chosen demonstration object perform one (1) cycle of its work on the given source,
         // using the given strategy for window placement. The window strategy needs the number of
         // windows and their sizes to calculate the right distribution of windows on the display.
         w->reset(d->getNumberOfWindows(), s->getImage().size());
