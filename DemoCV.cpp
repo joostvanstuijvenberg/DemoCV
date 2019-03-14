@@ -90,8 +90,8 @@ int main(int argc, char** argv)
 
 	// All available sources. Pick one as default.
 	CameraSource cs0{ 0 }, cs1{ 1 };
-	FileSource fs0{ "../Gears.bmp" }, fs1{ "../Shapes.bmp" }, fs2{ "../Colors.jpg" }, fs3{ "../Things.bmp" };
-	MovieSource ms0{ "../Video.avi" }, ms1{ "../Video.mp4" };
+	FileSource fs0{ "media/Gears.bmp" }, fs1{ "media/Shapes.bmp" }, fs2{ "media/Colors.jpg" }, fs3{ "media/Things.bmp" };
+	MovieSource ms0{ "media/Video.avi" }, ms1{ "media/Video.mp4" };
 
 	std::map<char, Source*> sources;
 	sources.insert(std::pair<char, Source*>('a', &cs0));

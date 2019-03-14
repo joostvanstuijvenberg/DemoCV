@@ -18,7 +18,7 @@ void Demo::show() const
 	// Make namedWindow-instances for all windows, as requested by the subclass. Note that this has
 	// to be done *after* the default constructor for Demo has been called, so it's not an option
 	// to put this in the superclass constructor.
-	for (std::string name : windows)
+	for (const auto& name : windows)
 		cv::namedWindow(name, CV_WINDOW_AUTOSIZE);
 }
 
@@ -30,7 +30,7 @@ void Demo::show() const
 void Demo::hide() const
 {
 	// Destroy all windows that belong to this demonstration (and this demonstration only!).
-	for (std::string name : windows)
+	for (const auto& name : windows)
 		cv::destroyWindow(name);
 }
 

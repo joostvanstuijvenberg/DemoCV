@@ -13,7 +13,7 @@ BlobDetectionDemo::BlobDetectionDemo()
     windows.emplace_back("1. Original");
     windows.emplace_back("2. Circular blobs");
 
-    cv::FileStorage storage("../BlobDetectionParameters.xml", cv::FileStorage::READ);
+    cv::FileStorage storage("BlobDetectionParameters.xml", cv::FileStorage::READ);
     cv::FileNode node = storage["opencv_storage"];
     params.read(node);
 

@@ -124,7 +124,7 @@ private:
 inline CameraSource::CameraSource(int cameraNumber)
 {
 	camera = cv::VideoCapture(cameraNumber);
-	noData = cv::imread("../Test.bmp");
+	noData = cv::imread("media/Test.bmp");
 	int w = std::max((int)camera.get(CV_CAP_PROP_FRAME_WIDTH), MEDIA_DEFAULT_WIDTH);
 	int h = std::max((int)camera.get(CV_CAP_PROP_FRAME_HEIGHT), MEDIA_DEFAULT_HEIGHT);
 	cv::resize(noData, noData, cv::Size(w, h));
@@ -159,7 +159,7 @@ inline MovieSource::MovieSource(std::string filename)
 	movie = cv::VideoCapture(filename);
 	//movie.set(CV_CAP_PROP_FOURCC, CV_FOURCC('D', 'I', 'V', '4'));
 	//movie.set(CV_CAP_PROP_FOURCC, CV_FOURCC('M', 'J', 'P', 'G'));
-	noData = cv::imread("../Test.bmp");
+	noData = cv::imread("media/Test.bmp");
 	int w = std::max((int)movie.get(CV_CAP_PROP_FRAME_WIDTH), MEDIA_DEFAULT_WIDTH);
 	int h = std::max((int)movie.get(CV_CAP_PROP_FRAME_HEIGHT), MEDIA_DEFAULT_HEIGHT);
 	cv::resize(noData, noData, cv::Size(w, h));
