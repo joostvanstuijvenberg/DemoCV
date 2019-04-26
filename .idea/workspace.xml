@@ -11,11 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81cb158d-a2c7-44b7-bc55-bd65e7dae3eb" name="Default Changelist" comment="">
+    <list default="true" id="81cb158d-a2c7-44b7-bc55-bd65e7dae3eb" name="Default Changelist" comment="Changed image and movie files to unlicensed, royalty-free images and videos from Pixabay.com and Pexels.com">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlobDetectionDemo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BlobDetectionDemo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlobDetectionParameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BlobDetectionParameters.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoCV.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DemoCV.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -75,45 +73,47 @@
     <session id="308534201">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="5" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.6" value="6" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Makefile" value="1" />
           <entry key="cmake" value="1" />
-          <entry key="cpp" value="29" />
+          <entry key="cpp" value="30" />
           <entry key="h" value="6" />
-          <entry key="hpp" value="9" />
-          <entry key="txt" value="4" />
+          <entry key="hpp" value="12" />
+          <entry key="txt" value="5" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="5" />
-          <entry key="ObjectiveC" value="44" />
+          <entry key="CMakeLists.txt" value="6" />
+          <entry key="ObjectiveC" value="48" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1209" />
+          <entry key="cpp" value="1376" />
           <entry key="h" value="10" />
-          <entry key="hpp" value="263" />
-          <entry key="txt" value="458" />
+          <entry key="hpp" value="265" />
+          <entry key="txt" value="615" />
           <entry key="xml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="83" />
-          <entry key="ObjectiveC" value="1482" />
-          <entry key="PLAIN_TEXT" value="375" />
+          <entry key="ObjectiveC" value="1651" />
+          <entry key="PLAIN_TEXT" value="532" />
           <entry key="XML" value="25" />
         </counts>
       </usages-collector>
@@ -124,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DemoCV.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-58">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="315">
+              <caret line="114" column="95" selection-start-line="114" selection-start-column="95" selection-end-line="114" selection-end-column="95" />
               <folding>
                 <element signature="e#2336#2353#0" expanded="true" />
               </folding>
@@ -134,19 +134,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BlobDetectionDemo.cpp">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlobDetectionParameters.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="135">
+              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -180,15 +171,15 @@
         <option value="$PROJECT_DIR$/Demo.h" />
         <option value="$PROJECT_DIR$/Source.h" />
         <option value="$PROJECT_DIR$/Demo.cpp" />
-        <option value="$PROJECT_DIR$/Source.hpp" />
         <option value="$PROJECT_DIR$/ShiftedWindowStrategy.cpp" />
         <option value="$PROJECT_DIR$/StackedWindowStrategy.cpp" />
         <option value="$PROJECT_DIR$/WindowStrategy.hpp" />
         <option value="$PROJECT_DIR$/BasicMorphologyDemo.cpp" />
-        <option value="$PROJECT_DIR$/DemoCV.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/BlobDetectionParameters.xml" />
         <option value="$PROJECT_DIR$/BlobDetectionDemo.cpp" />
+        <option value="$PROJECT_DIR$/Source.hpp" />
+        <option value="$PROJECT_DIR$/DemoCV.cpp" />
       </list>
     </option>
   </component>
@@ -212,6 +203,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,7 +215,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,7 +266,9 @@
       <workItem from="1552555036255" duration="5566000" />
       <workItem from="1552574627421" duration="2302000" />
       <workItem from="1552586784148" duration="2063000" />
-      <workItem from="1552588864669" duration="1446000" />
+      <workItem from="1552588864669" duration="6064000" />
+      <workItem from="1554645428609" duration="812000" />
+      <workItem from="1554648199997" duration="56000" />
     </task>
     <task id="LOCAL-00001" summary="Added some CLion files.">
       <created>1537127643706</created>
@@ -368,22 +361,36 @@
       <option name="project" value="LOCAL" />
       <updated>1552588127079</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changes in blob detection parameters.">
+      <created>1552590391724</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1552590391725</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changed image and movie files to unlicensed, royalty-free images and videos from Pixabay.com and Pexels.com">
+      <created>1552592910256</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1552592910256</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22563000" />
+    <option name="totallyTimeSpent" value="28049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="25" width="1869" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22270982" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22819528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32864866" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32864866" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39891893" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -421,7 +428,9 @@
     <MESSAGE value="Using shared pointers for the various demos." />
     <MESSAGE value="Corrected some indentation." />
     <MESSAGE value="Some minor comment changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some minor comment changes." />
+    <MESSAGE value="Changes in blob detection parameters." />
+    <MESSAGE value="Changed image and movie files to unlicensed, royalty-free images and videos from Pixabay.com and Pexels.com" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed image and movie files to unlicensed, royalty-free images and videos from Pixabay.com and Pexels.com" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -483,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="89" column="1" lean-forward="true" selection-end-line="188" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StackedWindowStrategy.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -497,27 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WindowStrategy.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="106" column="49" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BasicMorphologyDemo.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-          <folding>
-            <element signature="e#233#250#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -532,23 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="527" selection-start-line="527" selection-end-line="527" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DemoCV.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="e#2336#2353#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -575,8 +543,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlobDetectionDemo.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
+        <state relative-caret-position="525">
           <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="139" column="17" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WindowStrategy.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1710" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DemoCV.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="114" column="95" selection-start-line="114" selection-start-column="95" selection-end-line="114" selection-end-column="95" />
+          <folding>
+            <element signature="e#2336#2353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
     </entry>

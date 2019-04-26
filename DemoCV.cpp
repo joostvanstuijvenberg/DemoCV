@@ -116,7 +116,8 @@ int main(int argc, char** argv)
         // was pressed.
         key = cv::waitKey(run ? WAIT_TIME_25_FPS : WAIT_TIME_INFINITE);
 
-        // Capital characters select the demonstration.
+        // Capital characters select the demonstration. If a demonstration was chosen, first hide the
+        // currently displayed one, then show the selected one.
         if (demos.count(key) != 0)
         {
             d->hide();
